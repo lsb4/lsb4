@@ -2,21 +2,53 @@
 import { css } from "@emotion/react";
 
 export const Menu: React.FC<MenuProps> = () => {
+  function scrollToSection(id: string) {
+    let section = document.querySelector(`#${id}`) as Element | null | any;
+
+    if (section !== null) {
+      window.scrollTo({ top: section.offsetTop - 10, behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="flex justify-center w-full pt-10">
       <div className="flex justify-between w-full max-w-[80%]">
         <div className="flex items-center gap-6">
           <p css={menuItem}>Home</p>
           <span css={ball} className="bg-main"></span>
-          <p css={menuItem}>About Me</p>
+          <p
+            css={menuItem}
+            onClick={() => {
+              scrollToSection("aboutMe");
+            }}
+          >
+            About Me
+          </p>
           <span css={ball} className="bg-main"></span>
-          <p css={menuItem}>Skills</p>
+          <p
+            css={menuItem}
+            onClick={() => {
+              scrollToSection("skills");
+            }}
+          >
+            Skills
+          </p>
           <span css={ball} className="bg-main"></span>
-          <p css={menuItem}>Projects</p>
+          <p
+            css={menuItem}
+            onClick={() => {
+              scrollToSection("projects");
+            }}
+          >
+            Projects
+          </p>
         </div>
         <p
           css={contactMe}
           className="text-white font-medium bg-main px-3 py-1 rounded-lg cursor-pointer"
+          onClick={() => {
+            scrollToSection("contactMe");
+          }}
         >
           Contact Me
         </p>
@@ -46,7 +78,7 @@ const menuItem = css`
     display: block;
     width: 0;
     height: 2px;
-    background: #b000fa;
+    background: var(--main);
     transition: width 0.3s;
   }
 
@@ -59,6 +91,6 @@ const contactMe = css`
   transition: all 0.2s;
   :hover {
     background-color: #ececec;
-    color: #b000fa;
+    color: var(--main);
   }
 `;

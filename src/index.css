@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main: #b000fa;
+}
+
 * {
   font-family: Roboto;
 }

@@ -2,8 +2,18 @@
 import { css } from "@emotion/react";
 
 import image from "./assets/image.png";
+import curriculo from "./assets/curriculo.pdf";
+import resume from "./assets/resume.pdf";
 
 export const Introduction: React.FC<IntroductionProps> = () => {
+  function scrollToSection(id: string) {
+    let section = document.querySelector(`#${id}`) as Element | null | any;
+
+    if (section !== null) {
+      window.scrollTo({ top: section.offsetTop - 10, behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="flex justify-center items-center w-full h-[75vh]">
       <div className="flex justify-between items-center w-full max-w-[75%] mt-20">
@@ -20,12 +30,29 @@ export const Introduction: React.FC<IntroductionProps> = () => {
             </span>
           </div>
           <div className="flex gap-8 mt-3">
-            <p css={introButton}>Explore</p>
-            <p css={introButton}>Download CV</p>
+            <p
+              css={introButton}
+              onClick={() => {
+                scrollToSection("aboutMe");
+              }}
+            >
+              Explore
+            </p>
+            <a href={curriculo} download="curriculo.pdf" css={introButton}>
+              Download CV | PT
+            </a>
+            <a href={resume} download="resume.pdf" css={introButton}>
+              Download CV | EN
+            </a>
           </div>
         </div>
         <div css={fading}>
-          <img className="w-full" style={{ maxWidth: "600px" }} src={image} alt="" />
+          <img
+            className="w-full"
+            style={{ maxWidth: "600px" }}
+            src={image}
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -35,16 +62,21 @@ export const Introduction: React.FC<IntroductionProps> = () => {
 interface IntroductionProps {}
 
 const introButton = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   color: white;
-  border: 2px solid #b000fa;
+  border: 2px solid var(--main);
   border-radius: 7px;
   padding: 3px 10px;
   cursor: pointer;
   transition: all 0.2s;
 
   :hover {
-    border-color: #b000fa;
-    color: #b000fa;
+    border-color: var(--main);
+    color: var(--main);
   }
 `;
 
@@ -62,7 +94,7 @@ const typing = css`
 `;
 
 const blinking = css`
-  animation: blink .8s infinite;
+  animation: blink 0.8s infinite;
 
   @keyframes blink {
     to {
@@ -99,7 +131,7 @@ const fading = css`
     left: 0;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     display: none;
   }
 `;
