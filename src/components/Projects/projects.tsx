@@ -32,7 +32,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
         subtitle="Some of my projects"
         hasSpace={false}
       />
-      <div className="flex gap-12 mt-12 mb-4">
+      <div className="flex justify-center items-center flex-wrap gap-12 mt-12 mb-4">
         <ProjectCard
           href="https://github.com/lsb4/Contador-DevChallenge"
           title="Contador de Dias"

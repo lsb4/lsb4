@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+
 import { SectionTitle } from "../SectionTitle";
 import { SkillCard } from "../SkillCard";
 
@@ -21,7 +24,10 @@ import figmaLogo from "./assets/figmaLogo.png";
 
 export const Skills: React.FC<SkillsProps> = () => {
   return (
-    <div id="skills" className="flex flex-col w-full justify-center items-center mt-10 overflow-hidden">
+    <div
+      id="skills"
+      className="flex flex-col w-full justify-center items-center mt-10 overflow-hidden"
+    >
       <SectionTitle
         whiteTitle="Skill"
         purpleTitle="s"
@@ -31,7 +37,10 @@ export const Skills: React.FC<SkillsProps> = () => {
       <div className="mt-10 flex gap-14 flex-col lg:flex-row">
         <div>
           <p className="text-white font-semibold text-[25px] mb-4">Web</p>
-          <div className="grid grid-rows-3 grid-cols-3 gap-3">
+          <div
+            css={webSkillsMedia}
+            className="grid justify-items-center grid-rows-3 grid-cols-3 gap-3"
+          >
             <SkillCard title="HTML" logo={htmlLogo}></SkillCard>
             <SkillCard title="JavaScript" logo={javascriptLogo}></SkillCard>
             <SkillCard title="React" logo={reactLogo}></SkillCard>
@@ -51,7 +60,7 @@ export const Skills: React.FC<SkillsProps> = () => {
             <p className="text-white font-semibold text-[25px] mb-4">
               Programming
             </p>
-            <div className="grid grid-rows-1 grid-cols-3 gap-3">
+            <div className="flex gap-3 flex-wrap justify-center items-center">
               <SkillCard title="Python" logo={pythonLogo}></SkillCard>
               <SkillCard title="C | C# | C++" logo={cLogo}></SkillCard>
               <SkillCard title="Java" logo={javaLogo}></SkillCard>
@@ -60,7 +69,7 @@ export const Skills: React.FC<SkillsProps> = () => {
 
           <div>
             <p className="text-white font-semibold text-[25px] mb-4">Tools</p>
-            <div className="flex gap-3 justify-center">
+            <div className="flex gap-3 flex-wrap justify-center items-center">
               <SkillCard title="Figma" logo={figmaLogo}></SkillCard>
               <SkillCard title="Jira" logo={jiraLogo}></SkillCard>
               <SkillCard title="Git" logo={gitLogo}></SkillCard>
@@ -73,3 +82,13 @@ export const Skills: React.FC<SkillsProps> = () => {
 };
 
 interface SkillsProps {}
+
+const webSkillsMedia = css`
+  @media (max-width: 510px) {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+`;

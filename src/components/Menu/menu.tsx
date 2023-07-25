@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
+import hamburguerIcon from "./assets/menuIcon.png";
+
 export const Menu: React.FC<MenuProps> = () => {
   function scrollToSection(id: string) {
     let section = document.querySelector(`#${id}`) as Element | null | any;
@@ -12,8 +14,11 @@ export const Menu: React.FC<MenuProps> = () => {
 
   return (
     <div className="flex justify-center w-full pt-10">
-      <div className="flex justify-between w-full max-w-[80%]">
-        <div className="flex items-center gap-6">
+      <div className="flex flex-row-reverse md:flex-row justify-between w-full max-w-[80%]">
+        <div className="block md:hidden w-full max-w-[30px] bg-main rounded p-1">
+          <img src={hamburguerIcon} alt="" style={{ filter: "invert(100%)" }} />
+        </div>
+        <div css={hamburguerOptions} className="hidden md:flex items-center gap-6">
           <p css={menuItem}>Home</p>
           <span css={ball} className="bg-main"></span>
           <p
@@ -93,4 +98,7 @@ const contactMe = css`
     background-color: #ececec;
     color: var(--main);
   }
+`;
+
+const hamburguerOptions = css`
 `;

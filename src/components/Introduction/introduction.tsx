@@ -6,14 +6,6 @@ import curriculo from "./assets/curriculo.pdf";
 import resume from "./assets/resume.pdf";
 
 export const Introduction: React.FC<IntroductionProps> = () => {
-  function scrollToSection(id: string) {
-    let section = document.querySelector(`#${id}`) as Element | null | any;
-
-    if (section !== null) {
-      window.scrollTo({ top: section.offsetTop - 10, behavior: "smooth" });
-    }
-  }
-
   return (
     <div className="flex justify-center items-center w-full h-[75vh]">
       <div className="flex justify-between items-center w-full max-w-[75%] mt-20">
@@ -30,14 +22,6 @@ export const Introduction: React.FC<IntroductionProps> = () => {
             </span>
           </div>
           <div className="flex gap-8 mt-3">
-            <p
-              css={introButton}
-              onClick={() => {
-                scrollToSection("aboutMe");
-              }}
-            >
-              Explore
-            </p>
             <a href={curriculo} download="curriculo.pdf" css={introButton}>
               Download CV | PT
             </a>
