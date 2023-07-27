@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/lsb4/static/css/main.28736348.css",
+    "main.js": "/lsb4/static/js/main.878ae8ce.js",
+    "static/js/787.ffab8749.chunk.js": "/lsb4/static/js/787.ffab8749.chunk.js",
+    "static/media/image.png": "/lsb4/static/media/image.3a3f2d4345ab865a072b.png",
+    "static/media/emotionLogo.png": "/lsb4/static/media/emotionLogo.e7c5171d414020397499.png",
+    "static/media/image.jpeg": "/lsb4/static/media/image.f54532bbf2ecde9051eb.jpeg",
+    "static/media/pythonLogo.png": "/lsb4/static/media/pythonLogo.82efb64f8698a267f8bf.png",
+    "static/media/whatsappLogo.png": "/lsb4/static/media/whatsappLogo.dbf306510d3109059cac.png",
+    "static/media/curriculo.pdf": "/lsb4/static/media/curriculo.fe41e5788168cf2436be.pdf",
+    "static/media/resume.pdf": "/lsb4/static/media/resume.9d65840ec2ca899d5fe5.pdf",
+    "static/media/figmaLogo.png": "/lsb4/static/media/figmaLogo.735f05f186aa3daf9c76.png",
+    "static/media/cLogo.png": "/lsb4/static/media/cLogo.837a49116fe3c020f47d.png",
+    "static/media/tailwindLogo.png": "/lsb4/static/media/tailwindLogo.36b2728bf0d14b7b7576.png",
+    "static/media/typescriptLogo.png": "/lsb4/static/media/typescriptLogo.1e3902edbe4c3f2970d8.png",
+    "static/media/project1.png": "/lsb4/static/media/project1.887501da92d84089605f.png",
+    "static/media/reactLogo.png": "/lsb4/static/media/reactLogo.34fe894cb320df8fe8e0.png",
+    "static/media/project2.png": "/lsb4/static/media/project2.449655361bc114369fca.png",
+    "static/media/sassLogo.png": "/lsb4/static/media/sassLogo.c5da83bb9ff45b84e0e7.png",
+    "static/media/javascriptLogo.png": "/lsb4/static/media/javascriptLogo.ac9e504211b46cfb0118.png",
+    "static/media/cssLogo.png": "/lsb4/static/media/cssLogo.bc75ccc78e3bf74f8aed.png",
+    "static/media/githubLogo.png": "/lsb4/static/media/githubLogo.af769eb102d9eb43d337.png",
+    "static/media/linkedinLogo.png": "/lsb4/static/media/linkedinLogo.bb933d6809d6410387a0.png",
+    "static/media/htmlLogo.png": "/lsb4/static/media/htmlLogo.7ce256ade95eac32a633.png",
+    "static/media/styledComponentsLogo.png": "/lsb4/static/media/styledComponentsLogo.75e876ee374bea786437.png",
+    "static/media/javaLogo.png": "/lsb4/static/media/javaLogo.6c64373d3b7415758078.png",
+    "index.html": "/lsb4/index.html",
+    "main.28736348.css.map": "/lsb4/static/css/main.28736348.css.map",
+    "main.878ae8ce.js.map": "/lsb4/static/js/main.878ae8ce.js.map",
+    "787.ffab8749.chunk.js.map": "/lsb4/static/js/787.ffab8749.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28736348.css",
+    "static/js/main.878ae8ce.js"
+  ]
+}
